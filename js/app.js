@@ -1,26 +1,35 @@
-var app =angular.module('campus360',[]);
+var app = angular.module("campus360", []);
 
-app.controller("dashboardcontroller",function($scope){
+app.controller("dashboardcontroller", function ($scope) {
 
+    $scope.collegename = "FiSaT";
 
-    $scope.collegename="FISAT";
-     $scope.totalStudents = 1200;
+    $scope.totalStudents = 1200;
+
     $scope.totalFaculty = 120;
-    console.log("dashboard controller is loaded");
 
-    $scope.students=[
-        "shahid","jhon","allen","shaun"
-    ];    
-    
-   $scope.addStudent = function(){
+    $scope.students = [
+        "Shahid",
+        "John",
+        "Allen",
+        "Shaun"
+    ];
 
-    $scope.totalStudents++;
+    $scope.fees = 25600;
 
-    $scope.showstudents=true;
+    $scope.today = new Date();
 
-    $scope.showDashboard = true;
-    
-    
-};
+    $scope.departments=[
+        "cse","MCA","MBA","EEE","BCA","IMCA"
+
+    ];
+
+    $scope.selectedDepartment ="MCA";
+
+    $scope.addStudent = function () {
+
+        $scope.totalStudents++;
+
+    };
+
 });
-

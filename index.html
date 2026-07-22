@@ -69,6 +69,72 @@
         </li>
     </ul>
 
+    <hr>
+
+    <h2>filter demo</h2>
+
+    <p>uppercase : {{collegename | uppercase}}</p>
+    <p>lowercase : {{collegename | lowercase}}</p>
+        <p>currency : {{fees}}</p>
+        <p>date : {{today | date:'dd/MM/yyyy'}}</p>
+        <p>number : {{fees | number:2}}</p>
+
+        <hr>
+        <h2>selcted departments</h2>
+
+        <label>Select Department</label>
+
+        <br><br>
+
+        <select ng-model="selectedDepartment"
+                ng-options="department for department in departments">
+          </select>      
+
+          <p>Select Department:{{selectedDepartment}}</p>
+
+
+        <hr>
+
+<h2>Department Information</h2>
+
+<div ng-switch="selectedDepartment">
+
+    <div ng-switch-when="CSE">
+        <h3>Computer Science Engineering</h3>
+        <p>Programming, AI, Data Science and Software Development.</p>
+    </div>
+
+    <div ng-switch-when="MBA">
+        <h3>MBA</h3>
+        <p>Embedded Systems, VLSI, Communication and IoT.</p>
+    </div>
+
+    <div ng-switch-when="MCA">
+        <h3>MCA</h3>
+        <p>Power Systems, Electrical Machines and Automation.</p>
+    </div>
+
+    <div ng-switch-when="EEE">
+        <h3>EEE</h3>
+        <p>Manufacturing, CAD/CAM and Thermal Engineering.</p>
+    </div>
+
+    <div ng-switch-when="BCA">
+        <h3>BCA</h3>
+        <p>Construction, Structural Design and Surveying.</p>
+    </div>
+
+    <div ng-switch-when="IMCA">
+        <h3>IMCA</h3>
+        <p>Construction, Structural Design and Surveying.</p>
+    </div>
+
+    <div ng-switch-default>
+        <h3>Please Select a Department</h3>
+    </div>
+
+</div>
+
 </body>
 
 </html>
